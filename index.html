@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="images/style.css" />
+    <title>Kitob Jadvali</title>
+  </head>
+  <body>
+    <input type="checkbox" class="darcmode" checked />
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Progress</th>
+          <th>Rating</th>
+          <th>URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>11/11/2022</td>
+          <td>Fire & Blood</td>
+          <td>George R.R. Martin</td>
+          <td>
+            <span class="genre-badge fantasy">Fantasy</span>
+            <span class="genre-badge fiction">Fiction</span>
+          </td>
+          <td>
+            <div class="container">
+              <div class="progress" id="progress">
+                <div class="progress-value" id="progressValue">0%</div>
+              </div>
+            </div>
+          </td>
+          <td class="rating">★★★★</td>
+          <td><a href="https://abc.in">https://abc.in</a></td>
+        </tr>
+        <tr>
+          <td>22/10/2022</td>
+          <td>Bridge of Clay</td>
+          <td>Markus Zusak</td>
+          <td><span class="genre-badge fiction">Fiction</span></td>
+          <td>
+            <div class="container">
+              <div class="progress" id="progress">
+                <div class="progress-value" id="progressValue">0%</div>
+              </div>
+            </div>
+          </td>
+          <td class="rating">★★★★</td>
+          <td><a href="https://abc.in">https://abc.in</a></td>
+        </tr>
+        <tr>
+          <td>22/05/2022</td>
+          <td>Do Epic Shit</td>
+          <td>Ankur Warikoo</td>
+          <td><span class="genre-badge self-help">Self-help</span></td>
+          <td>
+            <div class="container">
+              <div class="progress" id="progress">
+                <div class="progress-value" id="progressValue">0%</div>
+              </div>
+            </div>
+          </td>
+          <td class="rating">★★★★★</td>
+          <td><a href="https://abc.in">https://abc.in</a></td>
+        </tr>
+        <tr>
+          <td>14/07/2020</td>
+          <td>My Sister's Keeper</td>
+          <td>Jodi Picoult</td>
+          <td>
+            <span class="genre-badge fiction">Fiction</span>
+            <span class="genre-badge sappy">Sappy</span>
+          </td>
+          <td>
+            <div class="container">
+              <div class="progress" id="progress">
+                <div class="progress-value" id="progressValue">0%</div>
+              </div>
+            </div>
+          </td>
+          <td class="rating">★★★★★</td>
+          <td><a href="https://abc.in">https://abc.in</a></td>
+        </tr>
+        <tr>
+          <td>12/04/2021</td>
+          <td>Atomic Habits</td>
+          <td>James Clear</td>
+          <td><span class="genre-badge self-help">Self-help</span></td>
+          <td>
+            <div class="container">
+              <div class="progress" id="progress">
+                <div class="progress-value" id="progressValue">0%</div>
+              </div>
+            </div>
+          </td>
+          <td class="rating">★★★★★</td>
+          <td><a href="https://abc.in">https://abc.in</a></td>
+        </tr>
+        <tr>
+          <td>02/02/2022</td>
+          <td>Dune</td>
+          <td>Frank Herbert</td>
+          <td><span class="genre-badge sci-fi">Sci-Fi</span></td>
+          <td>
+            <div class="container">
+              <div class="progress" id="progress">
+                <div class="progress-value" id="progressValue">0%</div>
+              </div>
+            </div>
+          </td>
+          <td class="rating">★★★★★</td>
+          <td><a href="https://abc.in">https://abc.in</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      const progressValue = document.getElementById("progressValue");
+      let progress = 0;
+
+      const intervalId = setInterval(() => {
+        if (progress !== 100) {
+          progress += 1;
+          progressValue.style.left = progress + "px";
+          progressValue.innerHTML = progress + "%";
+        } else {
+          clearInterval(intervalId);
+        }
+      }, 100);
+    </script>
+  </body>
+</html>
